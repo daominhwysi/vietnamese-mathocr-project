@@ -1,0 +1,22 @@
+[workspace]
+channels = ["conda-forge", "pytorch"]
+name = "vietnamese-mathocr-project"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+python = "3.10.*"
+pytorch = ">=2.5.0,<3"
+torchvision = "*"
+torchaudio = "*"
+pandas = "*"
+numpy = "<2.2"
+tqdm = "*"
+huggingface_hub = "*"
+pillow = "*"
+pyarrow = "*"
+timm = "*"
+pyturbojpeg = "*"
+imagehash = "*"

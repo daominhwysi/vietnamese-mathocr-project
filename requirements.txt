@@ -1,0 +1,9 @@
+pandas
+torch
+torchvision
+numpy
+timm
+huggingface_hub
+tqdm
+Pillow
+pyarrow
