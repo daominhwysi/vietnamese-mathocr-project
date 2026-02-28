@@ -4,4 +4,6 @@
 
 # temp data
 temp_data/*
-data/*
+
+.env
+/output_dev
