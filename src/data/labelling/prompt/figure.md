@@ -19,9 +19,9 @@ Nhiệm vụ của bạn là chuyển đổi toàn bộ nội dung (văn bản, 
 ### Các tính năng
 
 #### VĂN BẢN
-- Trích xuất và giữ nguyên nội dung văn bản từ tài liệu gốc một cách đầy đủ, chính xác, bao gồm cả dấu câu, ngắt dòng, và thứ tự các đoạn.
-- Xuống dòng như bình thường.
-- Không được tự ý rút gọn, bỏ qua hoặc gộp các dòng lại nếu tài liệu gốc có ngắt dòng rõ ràng.
+- Các dòng cách nhau bởi <|ln|>
+- Các đoạn cách nhau bởi <|pn|>
+- Nếu trong ảnh xuất hiện các mục form điền được biểu diễn bằng các dấu "." hoặc " _ ", "-" tương đương lặp lại "..........." hoặc "_____" thì bỏ qua chứ không cần ghi.
 
 #### BẢNG THÔNG THƯỜNG
 Sử dụng HTML table trong tag `<table>`:

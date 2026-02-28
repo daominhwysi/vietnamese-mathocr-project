@@ -104,7 +104,7 @@ def draw_boxes(
 
     for order_idx, i in enumerate(sorted_indices):
         x1, y1, x2, y2 = bboxes[i]
-        key = f"R{order_idx + 1}"
+        key = f"IM{order_idx + 1}"
 
         # Vẽ khung
         color = COLORS[order_idx % len(COLORS)]

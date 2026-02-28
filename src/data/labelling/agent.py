@@ -5,7 +5,7 @@ from google.genai import types
 from dotenv import load_dotenv
 
 load_dotenv()
-async def generate(image_bytes: bytes):
+async def generate(image_bytes: bytes, prompt: str = "Please describe this image in detail."):
     client = genai.Client(
         api_key=os.environ.get("GEMINI_API_KEY"),
     )
@@ -21,19 +21,18 @@ async def generate(image_bytes: bytes):
                     mime_type="image/jpeg",
                     data=image_bytes,
                 ),
-                types.Part.from_text(text="Please describe this image in detail."),
+                types.Part.from_text(text=prompt),
             ],
         ),
     ]
 
     generate_content_config = types.GenerateContentConfig(
         thinking_config=types.ThinkingConfig(
-            include_thoughts=True,
+            thinking_level="MINIMAL",
         ),
-        # Note: media_resolution usage depends on specific model support
+        media_resolution="MEDIA_RESOLUTION_HIGH",
     )
 
-    # Added 'await' here
     response = await client.aio.models.generate_content(
         model=model,
         contents=contents,
