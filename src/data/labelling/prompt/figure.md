@@ -19,6 +19,7 @@ Nhiệm vụ của bạn là chuyển đổi toàn bộ nội dung (văn bản, 
 ### Các tính năng
 
 #### VĂN BẢN
+
 - Các dòng cách nhau bởi <|ln|>
 - Các đoạn cách nhau bởi <|pn|>
 - Nếu trong ảnh xuất hiện các mục form điền được biểu diễn bằng các dấu "." hoặc " _ ", "-" tương đương lặp lại "..........." hoặc "_____" thì bỏ qua chứ không cần ghi.
