@@ -1,9 +1,23 @@
-# pixi environments
+# --- Pixi Environments ---
+# Ignore the environments but keep the project configuration
 .pixi/*
 !.pixi/config.toml
+**/*.pyc
+# --- Python ---
+**/__pycache__/
+*.py[cod]
+*$py.class
+*.pyd
+.venv/
+venv/
+ENV/
 
-# temp data
-temp_data/*
-
+# --- Local Data & Secrets ---
 .env
-/output_dev
+.env.*
+temp_data/
+output_dev/
+
+# --- System Files ---
+.DS_Store
+Thumbs.db

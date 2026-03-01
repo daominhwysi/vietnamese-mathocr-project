@@ -99,12 +99,14 @@ def draw_boxes(
     else:
         sorted_indices = valid_indices
 
-    # Tạo dict cho ROI
+    # Tạo dict cho ROI và mapping tag -> bbox
     cropped_objects_np = OrderedDict()
+    tag_to_bbox = {}
 
     for order_idx, i in enumerate(sorted_indices):
         x1, y1, x2, y2 = bboxes[i]
         key = f"IM{order_idx + 1}"
+        tag_to_bbox[key] = [int(x1), int(y1), int(x2), int(y2)]
 
         # Vẽ khung
         color = COLORS[order_idx % len(COLORS)]
@@ -137,4 +139,4 @@ def draw_boxes(
                 cropped_objects_np[key] = roi.copy()
 
 
-    return out, cropped_objects_np
+    return out, cropped_objects_np, tag_to_bbox
